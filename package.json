@@ -30,8 +30,11 @@
     "react-xls": "^0.1.1",
     "redux": "^4.1.2",
     "sass": "^1.49.7",
+    "source-map-resolve": "^0.6.0",
+    "source-map-url": "^0.4.1",
     "stream-browserify": "^3.0.0",
     "styled-components": "^5.3.3",
+    "svgo": "^2.8.0",
     "video-react": "^0.15.0",
     "web-vitals": "^2.1.3"
   },
