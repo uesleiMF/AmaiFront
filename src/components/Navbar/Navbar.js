@@ -24,6 +24,13 @@ export default function Navbar() {
             <span>Home</span>
           </a>
         </li>
+
+        <li>
+                  <a href="/cadu">
+                  <FaRegUser />
+                  <span>Cadastro Usuarios</span>
+                </a>
+                </li>
         <li>
           <a href="/sobrenos">
             <FaUserPlus />
@@ -33,11 +40,12 @@ export default function Navbar() {
         {
           token ? (
             <li>
-              <a href="/">
+              <a href="/cadastro">
               <FaRegUser />
-              <span>Gerenciamento de produtos</span>
+              <span>Cadastro de Produtos</span>
             </a>
             </li>
+             
           ) : (
             <>
             </>
