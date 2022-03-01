@@ -71,54 +71,144 @@ export default function Home() {
         </div>
                 
     </Carousel>
-  
 
+    
+    
+    
+    <div className="card mt-6 bg-warning">
+        
+        <div className="card-title">
+          <div className="row">
+            <div className="col">
+              
+              <h3 className="mx-3 my-3 text-center">Cadastro de Produtos</h3>
+            </div>
+          </div>
+        </div>
 
-
-
-             
-        <h2 className="mx-3 my-3 text-center"> ENCONTREM AS CELULAS MAIS PROXIMAS DE VOÇÊS!</h2>
-                  <br></br>
-                
-    <Social>
-    <p><a href="https://maps.app.goo.gl/e9p6hr2WNqNPU19V9">
-            <img src={ue} alt="bo" width="40%" height="200px" />
+  <div className="row mb-4">
+              <div className="col-3">
+    <div className="card">
+    <a href="https://maps.app.goo.gl/e9p6hr2WNqNPU19V9">
+      
+            <img src={ue} alt="bo" className="card-img-top"/>
               </a>
-            <h7>Swagger</h7></p>
+              
+             <div className="card-body">
+          <h8 className="card-title">FOLHA 17 QUADRA 13 LOTE 09</h8>
+          <span className="badge bg-primary"></span>
+        </div>
+      </div>
+      </div>
 
-
-            <p><a href="https://maps.app.goo.gl/e9p6hr2WNqNPU19V9">
-            <img src={ue} alt="bo" width="40%" height="200px" />
+ 
+     <div class='col-3'>
+    <div className="card">
+    <a href="https://maps.app.goo.gl/e9p6hr2WNqNPU19V9">
+      
+            <img src={ue} alt="bo" className="card-img-top"/>
               </a>
-                
-            <h7>Prisma</h7></p>
+              
+             <div className="card-body">
+          <h8 className="card-title">FOLHA 17 QUADRA 13 LOTE 09</h8>
+          <span className="badge bg-primary"></span>
+        </div>
+      </div>
+      </div>
 
-            <p><a href="https://maps.app.goo.gl/e9p6hr2WNqNPU19V9">
-            <img src={ue} alt="bo" width="40%" height="200px" />
+      <div class='col-3'>
+    <div className="card">
+    <a href="https://maps.app.goo.gl/e9p6hr2WNqNPU19V9">
+      
+            <img src={ue} alt="bo" className="card-img-top"/>
               </a>
-            <h7>Swagger</h7></p>
+              
+             <div className="card-body">
+          <h8 className="card-title">FOLHA 17 QUADRA 13 LOTE 09</h8>
+          <span className="badge bg-primary"></span>
+        </div>
+      </div>
+      </div>
 
-
-            <p><a href="https://maps.app.goo.gl/e9p6hr2WNqNPU19V9">
-            <img src={ue} alt="bo" width="40%" height="200px" />
+      <div class='col-3'>
+    <div className="card">
+    <a href="https://maps.app.goo.gl/e9p6hr2WNqNPU19V9">
+      
+            <img src={ue} alt="bo" className="card-img-top"/>
               </a>
-                
-            <h7>Prisma</h7></p>
+              
+             <div className="card-body">
+          <h8 className="card-title">FOLHA 17 QUADRA 13 LOTE 09</h8>
+          <span className="badge bg-primary"></span>
+        </div>
+      </div>
+      </div>
 
-            <p><a href="https://maps.app.goo.gl/e9p6hr2WNqNPU19V9">
-            <img src={ue} alt="bo" width="40%" height="200px" />
+      <div class='col-3'>
+    <div className="card">
+    <a href="https://maps.app.goo.gl/e9p6hr2WNqNPU19V9">
+      
+            <img src={ue} alt="bo" className="card-img-top"/>
               </a>
-            <h7>Swagger</h7></p>
+              
+             <div className="card-body">
+          <h8 className="card-title">FOLHA 17 QUADRA 13 LOTE 09</h8>
+          <span className="badge bg-primary"></span>
+        </div>
+      </div>
+      </div>
 
-
-            <p><a href="https://maps.app.goo.gl/e9p6hr2WNqNPU19V9">
-            <img src={ue} alt="bo" width="40%" height="200px" />
+      <div class='col-3'>
+    <div className="card">
+    <a href="https://maps.app.goo.gl/e9p6hr2WNqNPU19V9">
+      
+            <img src={ue} alt="bo" className="card-img-top"/>
               </a>
-                
-            <h7>Prisma</h7></p>
-          </Social>
+              
+             <div className="card-body">
+          <h8 className="card-title">FOLHA 17 QUADRA 13 LOTE 09</h8>
+          <span className="badge bg-primary"></span>
+        </div>
+      </div>
+      </div>
+
+      <div class='col-3'>
+    <div className="card">
+    <a href="https://maps.app.goo.gl/e9p6hr2WNqNPU19V9">
+      
+            <img src={ue} alt="bo" className="card-img-top"/>
+              </a>
+              
+             <div className="card-body">
+          <h8 className="card-title">FOLHA 17 QUADRA 13 LOTE 09</h8>
+          <span className="badge bg-primary"></span>
+        </div>
+      </div>
+      </div>
+
+
+    <div class='col-3'>
+    <div className="card">
+    <a href="https://maps.app.goo.gl/e9p6hr2WNqNPU19V9">
+      
+            <img src={ue} alt="bo" className="card-img-top"/>
+              </a>
+              
+             <div className="card-body">
+          <h8 className="card-title">FOLHA 17 QUADRA 13 LOTE 09</h8>
+          <span className="badge bg-primary"></span>
+        </div>
+      </div>
+      </div>
+</div>
+</div>
+
+      
+    </Container>
+      
+    
           
-          </Container>
+        
     
     
     
