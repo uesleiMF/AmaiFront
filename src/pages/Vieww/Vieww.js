@@ -21,7 +21,7 @@ const Vieww = () => {
   // chamando a funcao getMusicaById
   useEffect(() => {
     getUserById();
-  }, [])
+  }, )
 
   // acessa o id no parametro da url;
   const { id } = useParams();

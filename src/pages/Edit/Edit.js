@@ -18,7 +18,7 @@ const Edit = () => {
   
   useEffect(() => {
     getProdutoById();
-  }, []);
+  }, );
 
   // buscar a musica que ja foi cadastrado no banco.
   // buscar a musica pelo o id passado via parametro da url.
