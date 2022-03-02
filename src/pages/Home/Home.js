@@ -72,13 +72,11 @@ export default function Home() {
                 
     </Carousel>
 
-    
-    
-    
-    <div className="card mt-6 bg-warning">
+      
+   
         
         <div className="card-title">
-          <div className="row">
+          <div className="row md-5">
             <div className="col">
               
               <h3 className="mx-3 my-3 text-center">Cadastro de Produtos</h3>
@@ -86,8 +84,8 @@ export default function Home() {
           </div>
         </div>
 
-  <div className="row mb-4">
-              <div className="col-3">
+  <div className="row mb-3">
+  <div class='col-4 p-3'>
     <div className="card">
     <a href="https://maps.app.goo.gl/e9p6hr2WNqNPU19V9">
       
@@ -100,9 +98,10 @@ export default function Home() {
         </div>
       </div>
       </div>
+
 
  
-     <div class='col-3'>
+      <div class='col-4 p-3'>
     <div className="card">
     <a href="https://maps.app.goo.gl/e9p6hr2WNqNPU19V9">
       
@@ -116,7 +115,7 @@ export default function Home() {
       </div>
       </div>
 
-      <div class='col-3'>
+      <div class='col-4 p-3'>
     <div className="card">
     <a href="https://maps.app.goo.gl/e9p6hr2WNqNPU19V9">
       
@@ -130,7 +129,23 @@ export default function Home() {
       </div>
       </div>
 
-      <div class='col-3'>
+      <div class='col-4 p-3'>
+    <div className="card">
+    
+    <a href="https://maps.app.goo.gl/e9p6hr2WNqNPU19V9">
+      
+            <img src={ue} alt="bo" className="card-img-top"/>
+              </a>
+              
+             <div className="card-body">
+          <h8 className="card-title">FOLHA 17 QUADRA 13 LOTE 09</h8>
+          <span className="badge bg-primary "></span>
+        </div>
+      </div>
+      </div>
+    
+
+      <div class='col-4 p-3'>
     <div className="card">
     <a href="https://maps.app.goo.gl/e9p6hr2WNqNPU19V9">
       
@@ -144,7 +159,7 @@ export default function Home() {
       </div>
       </div>
 
-      <div class='col-3'>
+      <div class='col-4 p-3'>
     <div className="card">
     <a href="https://maps.app.goo.gl/e9p6hr2WNqNPU19V9">
       
@@ -158,7 +173,7 @@ export default function Home() {
       </div>
       </div>
 
-      <div class='col-3'>
+      <div class='col-4 p-3'>
     <div className="card">
     <a href="https://maps.app.goo.gl/e9p6hr2WNqNPU19V9">
       
@@ -172,7 +187,7 @@ export default function Home() {
       </div>
       </div>
 
-      <div class='col-3'>
+      <div class='col-4 p-3'>
     <div className="card">
     <a href="https://maps.app.goo.gl/e9p6hr2WNqNPU19V9">
       
@@ -187,7 +202,7 @@ export default function Home() {
       </div>
 
 
-    <div class='col-3'>
+      <div class='col-4 p-3'>
     <div className="card">
     <a href="https://maps.app.goo.gl/e9p6hr2WNqNPU19V9">
       
@@ -201,7 +216,7 @@ export default function Home() {
       </div>
       </div>
 </div>
-</div>
+
 
       
     </Container>
