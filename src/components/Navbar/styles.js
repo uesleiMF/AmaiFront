@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const Container = styled.div`
  
-  border-bottom: 100px ;
+  border-bottom: 100% ;
   display: flex;
   flex-direction: row-reverse;
   align-items: center;

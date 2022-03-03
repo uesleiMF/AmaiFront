@@ -90,268 +90,146 @@ export default function Sobrenos() {
             </h2>
           </p>
 
-          <Cards>
-            <img src={c1} alt="bo" width="50%" height="200px" />
-
-            <br></br>
-            <br></br>
-            <h4>
-              <p> Jose Ueslei de Moraes Ferreira</p>
-            </h4>
-
-            <Social>
-              <a href="https://www.linkedin.com/in/jose-ueslei-de-moraes-ferreira-833b52112/">
-                
-                <SiLinkedin />
+          <div className="card mt-2 bg-success">
+  <h4 className="mx-3 my-3 text-center">ESCOLHA A CELULA MAIS PROXIMA DE SUA CASA </h4>
+  <h5 className="mx-3 my-3 text-center">CLIQUE NAS IMAGENS ABAIXO! </h5>
+        
+               
+  
+  <div className="row mb-3">
+  <div class='col-4 p-3'>
+    <div className="card">
+    <a href="https://maps.app.goo.gl/e9p6hr2WNqNPU19V9">
+      
+            <img src={c1} alt="bo" className="card-img-top"/>
               </a>
-              <a href="https://github.com/uesleiMF">
               
-                <AiFillGithub />
-              </a>
-            </Social>
-
-            <p>
-              <h4>
-                <center> Telefone: (094) 99972-7849 </center>
-              </h4>
-            </p>
-
-            <p>
-              <h5>
-                <center> INFORMAÇÕES:</center>
-              </h5>
-            </p>
-
-            <p>
-              <h5>
-                <center>FORMAÇÃO ACADEMICA:</center>
-              </h5>
-            </p>
-            <p>Analise e Desenvolimento de Sistemas</p>
-            <p>
-              Faculdade<br></br>(UNOPAR)
-            </p>
-            <h5>
-              <justify> CURSO DE PROGRAMAÇÃO WEB:</justify>
-            </h5>
-            <p>
-              Cursando FullStack (HTML, CSS, JAVASCRIPT, NODEJS, REACT, NESTJS,
-              MONGODB, POSTGRES<br></br>(ESCOLA DE PROGRAMAÇÃO BLUEEDTECH)
-            </p>
-          </Cards>
+             <div className="card-body">
+          <h8 className="card-title">FOLHA 17 QUADRA 13 LOTE 09</h8>
+          <span className="badge bg-primary"></span>
         </div>
-        <div>
-          <br></br>
+      </div>
+      </div>
 
-          <Cards>
-            <img src={c2} alt="bo" width="55%" height="200px" />
 
-            <br></br>
-            <br></br>
-            <pre>
-            
-              <h3> Felipe Patriccio </h3>
-            </pre>
-            <br></br>
-            <br></br>
-            <br></br>
-            <Social>
-              <a href="https://www.linkedin.com/in/felipe-patr%C3%ADcio-633b0b1a2/">
-                
-                <SiLinkedin />
+ 
+      <div class='col-4 p-3'>
+    <div className="card">
+    <a href="https://maps.app.goo.gl/e9p6hr2WNqNPU19V9">
+      
+            <img src={c2} alt="bo" className="card-img-top"/>
               </a>
-              <a href="https://github.com/felipepatricioo/">
-                
-                <AiFillGithub />
-              </a>
-            </Social>
-
-            <p>
-              <h4>
-                <center> Telefone: (041) 98760-6925 </center>
-              </h4>
-            </p>
-
-            <p>
-              <h4>
-                <center> INFORMAÇÕES:</center>
-              </h4>
-            </p>
-
-            <p>
-              <h4>
-                <center>FORMAÇÃO ACADEMICA:</center>
-              </h4>
-            </p>
-            <p>
-              Cursando Engenharia de Software<br></br>(UNINTER)
-            </p>
-            <h5>
-              <justify> CURSO DE PROGRAMAÇÃO WEB:</justify>
-            </h5>
-            <p>
-              Cursando FullStack (HTML, CSS, JAVASCRIPT, NODEJS, REACT, NESTJS,
-              MONGODB, POSTGRES<br></br>(ESCOLA DE PROGRAMAÇÃO BLUEEDTECH)
-            </p>
-          </Cards>
+              
+             <div className="card-body">
+          <h8 className="card-title">FOLHA 17 QUADRA 13 LOTE 09</h8>
+          <span className="badge bg-primary"></span>
         </div>
-        <div>
-          <br></br>
-          <Cards>
-            <img src={c1} alt="bo" width="50%" height="200px" />
+      </div>
+      </div>
 
-            <br></br>
-            <br></br>
-            <h4>
-              <p> Flavio Teston Izzo Junior</p>
-            </h4>
-
-            <Social>
-              <a href="https://www.linkedin.com/in/izzo-junior">
-                
-                <SiLinkedin />
+      <div class='col-4 p-3'>
+    <div className="card">
+    <a href="https://maps.app.goo.gl/e9p6hr2WNqNPU19V9">
+      
+            <img src={c1} alt="bo" className="card-img-top"/>
               </a>
-              <a href="https://github.com/izzojunior">
-                
-                <AiFillGithub />
-              </a>
-            </Social>
-
-            <p>
-              <h4>
-                <center> Telefone: (11) 93023-8601 </center>
-              </h4>
-            </p>
-
-            <p>
-              <h3>
-                <center> INFORMAÇÕES:</center>
-              </h3>
-            </p>
-
-            <p>
-              <h3>
-                <center>FORMAÇÃO:</center>
-              </h3>
-            </p>
-            <p>
-              <h5>
-                Ensino Medio Completo<br></br>
-              </h5>
-            </p>
-            <h5>
-              <justify> CURSO DE PROGRAMAÇÃO WEB:</justify>
-            </h5>
-            <p>
-              Cursando Backend (Java script, HTML, CSS, Node JS, Expres, github,
-              gerenciamento de dados, Banco de dados, Documentação, swagger, PG
-              adimim.<br></br>(ESCOLA DE PROGRAMAÇÃO BLUEEDTECH)
-            </p>
-          </Cards>
+              
+             <div className="card-body">
+          <h8 className="card-title">FOLHA 17 QUADRA 13 LOTE 09</h8>
+          <span className="badge bg-primary"></span>
         </div>
-        <div>
-          <br></br>
-          <Cards>
-            <img src={c2} alt="bo" width="50%" height="200px" />
+      </div>
+      </div>
 
-            <br></br>
-            <br></br>
-            <h4>
-              <p> Marcelo da Rocha Machado</p>
-            </h4>
-
-            <Social>
-              <a href="https://www.linkedin.com/in/marcelo-da-rocha-machado-38b77427/">
-                
-                <SiLinkedin />
+      <div class='col-4 p-3'>
+    <div className="card">
+    
+    <a href="https://maps.app.goo.gl/e9p6hr2WNqNPU19V9">
+      
+            <img src={c2} alt="bo" className="card-img-top"/>
               </a>
-              <a href=" https://github.com/machadomrm">
-                
-                <AiFillGithub />
-              </a>
-            </Social>
-
-            <p>
-              <h4>
-                <center>
-                  
-                  Telefone: (81) 988630116 *whatsapp / (81) 981194242
-                </center>
-              </h4>
-            </p>
-
-            <p>
-              <h4>
-                <center> INFORMAÇÕES:</center>
-              </h4>
-            </p>
-
-            <p>
-              <h4>
-                <center>FORMAÇÃO ACADEMICA:</center>
-              </h4>
-            </p>
-            <p>Formado em Gestão da Tecnologia da Informação</p>
-            <h5>
-              <justify> CURSO DE PROGRAMAÇÃO WEB:</justify>
-            </h5>
-            <p>
-              Cursando Backend (HTML, CSS, JAVASCRIPT, NODEJS, REACT, NESTJS,
-              MONGODB, POSTGRES<br></br>(ESCOLA DE PROGRAMAÇÃO BLUEEDTECH)
-            </p>
-          </Cards>
+              
+             <div className="card-body">
+          <h8 className="card-title">FOLHA 17 QUADRA 13 LOTE 09</h8>
+          <span className="badge bg-primary "></span>
         </div>
-        <div>
-          <br></br>
-          <Cards>
-            <img src={c1} alt="bo" width="50%" height="200px" />
+      </div>
+      </div>
+    
 
-            <br></br>
-            <br></br>
-            <h4>
-              <p> Rodrigo Reis de Sousa</p>
-            </h4>
-
-            <Social>
-              <a href="https://www.linkedin.com/in/rodrigo-reis-de-sousa-85131b144/">
-                
-                <SiLinkedin />
+      <div class='col-4 p-3'>
+    <div className="card">
+    <a href="https://maps.app.goo.gl/e9p6hr2WNqNPU19V9">
+      
+            <img src={c1} alt="bo" className="card-img-top"/>
               </a>
-              <a href="https://github.com/RodrigoRsousa">
-            
-                <AiFillGithub />
+              
+             <div className="card-body">
+          <h8 className="card-title">FOLHA 17 QUADRA 13 LOTE 09</h8>
+          <span className="badge bg-primary"></span>
+        </div>
+      </div>
+      </div>
+
+      <div class='col-4 p-3'>
+    <div className="card">
+    <a href="https://maps.app.goo.gl/e9p6hr2WNqNPU19V9">
+      
+            <img src={c2} alt="bo" className="card-img-top"/>
               </a>
-            </Social>
+              
+             <div className="card-body">
+          <h8 className="card-title">FOLHA 17 QUADRA 13 LOTE 09</h8>
+          <span className="badge bg-primary"></span>
+        </div>
+      </div>
+      </div>
 
-            <p>
-              <h4>
-                <center> Telefone: (47) 984801603 </center>
-              </h4>
-            </p>
+      <div class='col-4 p-3'>
+    <div className="card">
+    <a href="https://maps.app.goo.gl/e9p6hr2WNqNPU19V9">
+      
+            <img src={c1} alt="bo" className="card-img-top"/>
+              </a>
+              
+             <div className="card-body">
+          <h8 className="card-title">FOLHA 17 QUADRA 13 LOTE 09</h8>
+          <span className="badge bg-primary"></span>
+        </div>
+      </div>
+      </div>
 
-            <p>
-              <h4>
-                <center> INFORMAÇÕES:</center>
-              </h4>
-            </p>
+      <div class='col-4 p-3'>
+    <div className="card">
+    <a href="https://maps.app.goo.gl/e9p6hr2WNqNPU19V9">
+      
+            <img src={c2} alt="bo" className="card-img-top"/>
+              </a>
+              
+             <div className="card-body">
+          <h8 className="card-title">FOLHA 17 QUADRA 13 LOTE 09</h8>
+          <span className="badge bg-primary"></span>
+        </div>
+      </div>
+      </div>
 
-            <p>
-              <h4>
-                <center>FORMAÇÃO ACADEMICA:</center>
-              </h4>
-            </p>
-            <p>
-              Técnico em informática, Sistema da Informação-em andamento
-              (IFET-MG) / Tecnologo em redes - Univiçosa / Sistema - UDESC - SC
-            </p>
-            <h5>
-              <justify> CURSO DE PROGRAMAÇÃO WEB:</justify>
-            </h5>
-            <p>
-              Cursando Backend (Swagger, Banco de Dados, Pesquisa e Login de
-              Admin<br></br>(ESCOLA DE PROGRAMAÇÃO BLUEEDTECH)
-            </p>
-          </Cards>
+
+      <div class='col-4 p-3'>
+    <div className="card">
+    <a href="https://maps.app.goo.gl/e9p6hr2WNqNPU19V9">
+      
+            <img src={c1} alt="bo" className="card-img-top"/>
+              </a>
+              
+             <div className="card-body">
+          <h8 className="card-title">FOLHA 17 QUADRA 13 LOTE 09</h8>
+          <span className="badge bg-primary"></span>
+        </div>
+      </div>
+      </div>
+      </div>
+      
+      </div>
         </div>
         <div>
           <br></br>

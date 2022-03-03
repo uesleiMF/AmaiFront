@@ -2,12 +2,9 @@ import { Carousel } from 'react-responsive-carousel';
 import React from "react";
 import c1 from "../../components/Img/c1.jpg";
 import c2 from "../../components/Img/c2.jpg";
-
 import { GrInstagram } from "react-icons/gr";
 import { FaFacebookSquare } from "react-icons/fa";
 import {Social } from "./styles";
-
-
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import "./style.css";
 import "bootstrap/dist/css/bootstrap.min.css";
