@@ -1,8 +1,5 @@
-import ue from "../../components/Img/ues.jpg";
-import fe from "../../components/Img/feli.jpg";
-import fl from "../../components/Img/fla.jpg";
-import ro from "../../components/Img/logo.jpg";
-import ma from "../../components/Img/mac.jpg";
+import c1 from "../../components/Img/c1.jpg";
+import c2 from "../../components/Img/c2.jpg";
 import {
   SiLinkedin,
   SiReact,
@@ -94,7 +91,7 @@ export default function Sobrenos() {
           </p>
 
           <Cards>
-            <img src={ue} alt="bo" width="50%" height="200px" />
+            <img src={c1} alt="bo" width="50%" height="200px" />
 
             <br></br>
             <br></br>
@@ -147,7 +144,7 @@ export default function Sobrenos() {
           <br></br>
 
           <Cards>
-            <img src={fe} alt="bo" width="55%" height="200px" />
+            <img src={c2} alt="bo" width="55%" height="200px" />
 
             <br></br>
             <br></br>
@@ -201,7 +198,7 @@ export default function Sobrenos() {
         <div>
           <br></br>
           <Cards>
-            <img src={fl} alt="bo" width="50%" height="200px" />
+            <img src={c1} alt="bo" width="50%" height="200px" />
 
             <br></br>
             <br></br>
@@ -255,7 +252,7 @@ export default function Sobrenos() {
         <div>
           <br></br>
           <Cards>
-            <img src={ma} alt="bo" width="50%" height="200px" />
+            <img src={c2} alt="bo" width="50%" height="200px" />
 
             <br></br>
             <br></br>
@@ -307,7 +304,7 @@ export default function Sobrenos() {
         <div>
           <br></br>
           <Cards>
-            <img src={ro} alt="bo" width="50%" height="200px" />
+            <img src={c1} alt="bo" width="50%" height="200px" />
 
             <br></br>
             <br></br>

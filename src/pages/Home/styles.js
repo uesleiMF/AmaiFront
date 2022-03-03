@@ -7,6 +7,8 @@ export const Container = styled.div`
   align-items: center;
   flex-direction: column;
   padding: 10rem;
+  min-width: 768px;
+  max-width: 1024px;
 
   h2 {
     text-align: center;
@@ -26,7 +28,9 @@ export const CadContainer = styled.div`
   padding: 4rem 4rem 1rem 4rem;
   background-color: #9370DB;
   border-radius:100px;
-
+  min-width: 768px;
+  max-width: 1024px;
+  
   form {
     display: flex;
     flex-direction: column;
