@@ -28,7 +28,9 @@ export const LoginContainer = styled.div`
 
     & > input {
       font-size: 1.2rem;
-      width: 25rem;
+      min-width= 100%;
+      max-width= 100%;
+      
       height: 2.5rem;
       padding: 0.9rem 0.9rem;
       margin: 0.4rem 0;

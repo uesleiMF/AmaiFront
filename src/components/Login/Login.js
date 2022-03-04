@@ -4,7 +4,7 @@ import axios from "axios";
 import { toast } from "react-toastify";
 import './style.css';
 import { useNavigate } from "react-router-dom";
-
+import "bootstrap/dist/css/bootstrap.min.css";
 
 const Login = (props) => {
   const navigate = useNavigate();
@@ -33,8 +33,17 @@ const Login = (props) => {
 
   return (
     
-    <Container>
-      <h2>Acessar Conta </h2>
+    <div className="container">
+    <div className="card mt-2 bg-warning">
+      <div className="card-title">
+        <div className="row">
+          <div className="col">
+            
+            <h3 className="mx-3 my-3 text-center">Acessar Conta</h3>
+          </div>
+        </div>
+      </div>
+      
       <LoginContainer>
       <form className="mx-8" onSubmit={handleSubmit}>
         <input
@@ -63,7 +72,8 @@ const Login = (props) => {
         </form>
 
              </LoginContainer>
-    </Container>
+  </div>
+  </div>
   );
 };
 export default Login;
