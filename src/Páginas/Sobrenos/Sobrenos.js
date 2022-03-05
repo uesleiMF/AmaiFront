@@ -21,16 +21,16 @@ export default function Sobrenos() {
           <div className="row">
             <div className="col">
               <br></br>
-              <h3 className="mx-3 my-3 text-center">BIOGRAFIA DOS DEVS</h3>
+              <h3 className="mx-3 my-3 text-center">BIOGRAFIA DA REDE DE CASAIS AMAI
+
+</h3>
             </div>
           </div>
           <p>
             <h5>
               <justify>
                 
-                O projeto Gerenciador Restoque visa automatizar o gerenciamento
-                de produtos da maneira mais otimizada possível, nosso
-                disponibiliza a melhor solução para gerenciamento de produtos!
+                O Ministerio de casais ñnnhgfghjjoktcvvb!
               </justify>
             </h5>
           </p>
@@ -38,18 +38,11 @@ export default function Sobrenos() {
           <br></br>
           <p>
             <h3>
-              <center> INFORMAÇÕES SOBRE O PROJETO:</center>
+              <center> INFORMAÇÕES SOBRE A LIDERANÇA DE CASAIS:</center>
             </h3>
           </p>
 
-          <p>
-            <h5>
-              <center>
-                Aqui foram usadas as ferramentas para o desenvolvimento do nosso
-                projeto:
-              </center>
-            </h5>
-          </p>
+         
           <Social>
             <a href="https://swagger.io/">
               {" "}
