@@ -1,14 +1,11 @@
-import logo from "./rest.png";
-import { Container, Logo, List } from "./styles";
+import { Container,List } from "./styles";
 import {
-  FaRegQuestionCircle,
+ 
   FaHeart,
   FaRegUser,
   FaUserPlus,
-  FaUser,
+ 
 } from "react-icons/fa";
-import { Link } from "react-router-dom";
-import { useState } from "react";
 
 export default function Navbar() {
   const token = localStorage.getItem("token");
@@ -25,12 +22,7 @@ export default function Navbar() {
           </a>
         </li>
 
-        <li>
-                  <a href="/cadu">
-                  <FaRegUser />
-                  <span>Cadastro Usuarios</span>
-                </a>
-                </li>
+       
         <li>
           <a href="/sobrenos">
             <FaUserPlus />

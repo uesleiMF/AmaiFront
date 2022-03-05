@@ -2,6 +2,7 @@ import { Carousel } from 'react-responsive-carousel';
 import React from "react";
 import c1 from "../../components/Img/c1.jpg";
 import c2 from "../../components/Img/c2.jpg";
+import c3 from "../../components/Img/c3.jpg";
 import { GrInstagram } from "react-icons/gr";
 import { FaFacebookSquare } from "react-icons/fa";
 import {Social } from "./styles";
@@ -40,7 +41,7 @@ export default function Home() {
        <p className="l">Legend 2</p>
         </div>
         <div>
-       <img src={c1} alt="bo" min-width= '358px' max-width='1024px' />
+       <img src={c3} alt="bo" min-width= '358px' max-width='1024px' />
 
     <p className="l">Legend 3</p>
         </div>
@@ -127,11 +128,11 @@ export default function Home() {
     <div className="card">
     <a href="https://maps.app.goo.gl/e9p6hr2WNqNPU19V9">
       
-            <img src={c1} alt="bo" className="card-img-top"/>
+            <img src={c3} alt="bo" className="card-img-top"/>
               </a>
               
              <div className="card-body">
-          <h8 className="card-title">FOLHA 17 QUADRA 13 LOTE 09</h8>
+          <h8 className="card-title">FOLHA 05 QUADRA 01 LOTE 22</h8>
           <span className="badge bg-primary"></span>
         </div>
       </div>

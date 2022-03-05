@@ -1,6 +1,6 @@
 import c1 from "../../components/Img/c1.jpg";
 import c2 from "../../components/Img/c2.jpg";
-
+import c3 from "../../components/Img/c3.jpg";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 export default function Sobrenos() {
@@ -68,7 +68,7 @@ export default function Sobrenos() {
     <div className="card">
     <a href="https://maps.app.goo.gl/e9p6hr2WNqNPU19V9">
       
-            <img src={c1} alt="bo" className="card-img-top"/>
+            <img src={c3} alt="bo" className="card-img-top"/>
               </a>
               
              <div className="card-body">

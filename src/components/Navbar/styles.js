@@ -7,10 +7,10 @@ export const Container = styled.div`
   flex-direction: row-reverse;
   align-items: center;
   justify-content: space-between;
-  background-color:#9370DB;
-  padding: 20px;
-  min-width= 100%;
-  max-width= 100%;
+  background-color:#aa67d7;
+  padding: 18px;
+  width= 90%;
+ 
   
 `;
 
@@ -35,10 +35,10 @@ export const List = styled.ul`
   li {
     a {
       text-decoration: none;
-      color: #cd933e;
+      color:  #000000;
       font-weight: 700;
       padding: 0 1rem;
-      font-size: 0.9em;
+      font-size: 0.7em;
       display: flex;
       align-items: center;
 
