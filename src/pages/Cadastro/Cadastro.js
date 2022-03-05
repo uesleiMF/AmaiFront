@@ -3,7 +3,7 @@ import Api from "../../api/api";
 import { useNavigate } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import ListProdut from "../../components/structure/ListProdut";
-import "./style.css";
+import "./styles.css";
 
 
 
@@ -54,7 +54,7 @@ const Cadastro = () => {
           <div className="row">
             <div className="col">
               
-              <h3 className="mx-3 my-3 text-center">Cadastrar Casais</h3>
+              <h3 className="mx-3 my-3 text-center">Cadastro de Produtos</h3>
             </div>
           </div>
         </div>
@@ -64,25 +64,25 @@ const Cadastro = () => {
               <div className="col-5">
                 <div className="form-group">
                   <label htmlFor="titulo">Titulo:</label>
-                  <input id="titulo" className="form-control" type="text" placeholder="Nome do Casal" name="titulo"/>
+                  <input id="titulo" className="form-control" type="text" placeholder="Nome do Produto" name="titulo"/>
                 </div>
               </div>
               <div className="col-5">
                 <div className="form-group">
                   <label htmlFor="descricao">Descrição:</label>
-                  <input id="descricao" type="text" className="form-control" placeholder="Descrição do Casal" name="descricao"/>
+                  <input id="descricao" type="text" className="form-control" placeholder="Descrição do Produto" name="descricao"/>
                 </div>
               </div>
               <div className="col-5">
                 <div className="form-group">
                   <label htmlFor="prioridade">Prioridade :</label>
-                  <input id="prioridade" type="text" className="form-control" placeholder="" name="prioridade"/>
+                  <input id="prioridade" type="text" className="form-control" placeholder="(Ruim) (Bom) (Otimo)" name="prioridade"/>
                 </div>
               </div>
             <div className="col-5">
                 <div className="form-group">
                   <label htmlFor="status">Status :</label>
-                  <input id="status" type="text" className="form-control" placeholder="" name="status"/>
+                  <input id="status" type="text" className="form-control" placeholder="(Tipo1) (Tipo2) (Fora do Tipo)" name="status"/>
                 </div>
               </div>
             
@@ -101,7 +101,7 @@ const Cadastro = () => {
               <div className="col-5">
                 <div className="form-group">
                   <label htmlFor="data">Data de Fabricação:</label>
-                  <input id="data" type="age" className="form-control"  placeholder="Data Fabricação" name="data"/>
+                  <input id="data" type="date" className="form-control"  placeholder="Data Fabricação" name="data"/>
                 </div>
               </div>
             
@@ -120,7 +120,7 @@ const Cadastro = () => {
 
         <div>
             <h3 className="mx-3 my-3 text-center">
-                      Casais Cadastrados
+                      Produtos Cadastrados
                     </h3>
                   </div>
               

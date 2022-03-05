@@ -3,11 +3,11 @@ import Api from "../../api/api";
 import { useNavigate } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import ListProdut from "../../components/structure/ListProdut";
-import "./style.css";
+import "./styles.css";
 
 
 
-const Cadprod = () => {
+const Cadastro = () => {
   const navigate = useNavigate();
   
   const handleSubmit = async (evento) => {
@@ -41,7 +41,7 @@ const Cadprod = () => {
       console.log(result.error);
     }else {
       alert(result.message);
-      navigate('/');
+      navigate('/cadastro');
     }
   }
 
@@ -119,24 +119,16 @@ const Cadprod = () => {
     
 
         <div>
-          <div className="container">
-            <div className="card mt-6 bg-warning">
-              <div className="card-title">
-                <div className="row">
-                  <div className="col">
-                    <h3 className="mx-3 my-3 text-center">
+            <h3 className="mx-3 my-3 text-center">
                       Produtos Cadastrados
                     </h3>
                   </div>
-                </div>
+              
                 <ListProdut/>
               </div>
-            </div>
-          </div>
-        </div>
-        </div>
+
         
       
   );
 }
-export default Cadprod
+export default Cadastro
