@@ -22,8 +22,10 @@ const Login = (props) => {
       email: emailLogin,
       password: senha,
     };
+    
+ 
 
-    axios.post("/auth/login", login).then((response) => {
+    axios.post("https://back-end-test-t.herokuapp.com/users", login).then((response) => {
       const token = response.data.token;
       localStorage.setItem("token", token);
     });
