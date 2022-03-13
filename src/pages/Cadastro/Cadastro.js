@@ -1,6 +1,7 @@
 import React from "react";
 import Api from "../../api/api";
 import { useNavigate } from "react-router-dom";
+
 import "bootstrap/dist/css/bootstrap.min.css";
 import ListProdut from "../../components/structure/ListProdut";
 import "./styles.css";
