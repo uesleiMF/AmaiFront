@@ -12,6 +12,8 @@ import Edit from "./pages/Edit/Edit";
 import CadProd from "./pages/CadProd/Cadprod";
 import Cadastro from "./pages/Cadastro/Cadastro";
 import Cadu from './pages/Cadu/Cadu';
+import Login from "./components/Login/Login";
+
 
 
 
@@ -29,7 +31,7 @@ ReactDOM.render(
         <Route path="/cadu" element={<Cadu/>}/>
         <Route path="/cadastro" element={<Cadastro />} />
         <Route path="/cadprod" element={<CadProd />} />
-       
+        <Route path="/login" element={<Login/>} />
 
       </Routes>
    
