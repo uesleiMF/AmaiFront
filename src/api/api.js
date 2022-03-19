@@ -1,5 +1,5 @@
 const Api = {
-  apiUrl: 'https://back-end-test-t.herokuapp.com/produtos',
+  apiUrl: 'https://produt-list.herokuapp.com/produtos',
   
   fetchGetAll: () => fetch(Api.apiUrl),
   fetchGetById: (id) => fetch(`${Api.apiUrl}/${id}`),
