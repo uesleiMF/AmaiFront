@@ -1,8 +1,16 @@
 import { Carousel } from 'react-responsive-carousel';
 import React from "react";
+import c0 from "../../components/Img/c0.jpg";
 import c1 from "../../components/Img/c1.jpg";
 import c2 from "../../components/Img/c2.jpg";
 import c3 from "../../components/Img/c3.jpg";
+import c4 from "../../components/Img/c4.jpg";
+import c5 from "../../components/Img/c5.jpg";
+import c6 from "../../components/Img/c6.jpg";
+import c7 from "../../components/Img/c7.jpg";
+import c8 from "../../components/Img/c8.jpg";
+import c9 from "../../components/Img/c9.jpg";
+
 import { GrInstagram } from "react-icons/gr";
 import { FaFacebookSquare } from "react-icons/fa";
 import {Social } from "./styles";
@@ -30,54 +38,54 @@ export default function Home() {
                 
     <Carousel autoPlay>
         <div>
-            <img src={c1} alt="bo" min-width= '358px' max-width='1024px' />
+            <img src={c0} alt="bo" min-width= '358px' max-width='1024px' />
 
             <p className="l">LegendA 1 </p>
         </div>
         <div>
 
-        <img src={c2} alt="bo" min-width= '358px' max-width='1024px' />
+        <img src={c1} alt="bo" min-width= '358px' max-width='1024px' />
 
        <p className="l">Legend 2</p>
         </div>
         <div>
-       <img src={c3} alt="bo" min-width= '358px' max-width='1024px' />
+       <img src={c2} alt="bo" min-width= '358px' max-width='1024px' />
 
     <p className="l">Legend 3</p>
         </div>
         <div>
         
-        <img src={c2} alt="bo" min-width= '358px' max-width='1024px' />
+        <img src={c3} alt="bo" min-width= '358px' max-width='1024px' />
 
     <p className="l">Legend 4</p>
         </div>
         <div>
-       <img src={c2} alt="bo" min-width= '358px' max-width='1024px' />
+       <img src={c4} alt="bo" min-width= '358px' max-width='1024px' />
 
    <p className="l">Legend 5</p>
         </div>
         <div>
-       <img src={c2} alt="bo" min-width= '358px' max-width='1024px' />
+       <img src={c5} alt="bo" min-width= '358px' max-width='1024px' />
 
       <p className="l">Legend 6</p>
         </div>
         <div>
-       <img src={c1} alt="bo" min-width= '358px' max-width='1024px' />
+       <img src={c6} alt="bo" min-width= '358px' max-width='1024px' />
 
   <p className="l">Legend 7</p>
         </div>
         <div>
-       <img src={c1} alt="bo" min-width= '358px' max-width='1024px' />
+       <img src={c7} alt="bo" min-width= '358px' max-width='1024px' />
 
   <p className="l">Legend 8</p>
         </div>
         <div>
-       <img src={c2} alt="bo" min-width= '358px' max-width='1024px' />
+       <img src={c8} alt="bo" min-width= '358px' max-width='1024px' />
 
     <p className="l">Legend 9</p>
         </div>
         <div>
-       <img src={c1} alt="bo" min-width= '358px' max-width='1024px' />
+       <img src={c9} alt="bo" min-width= '358px' max-width='1024px' />
 
       <p className="l">Legend 10</p>
       </div>
@@ -143,7 +151,7 @@ export default function Home() {
     
     <a href="https://maps.app.goo.gl/e9p6hr2WNqNPU19V9">
       
-            <img src={c2} alt="bo" className="card-img-top"/>
+            <img src={c4} alt="bo" className="card-img-top"/>
               </a>
               
              <div className="card-body">
@@ -158,7 +166,7 @@ export default function Home() {
     <div className="card">
     <a href="https://maps.app.goo.gl/e9p6hr2WNqNPU19V9">
       
-            <img src={c1} alt="bo" className="card-img-top"/>
+            <img src={c5} alt="bo" className="card-img-top"/>
               </a>
               
              <div className="card-body">
@@ -172,7 +180,7 @@ export default function Home() {
     <div className="card">
     <a href="https://maps.app.goo.gl/e9p6hr2WNqNPU19V9">
       
-            <img src={c2} alt="bo" className="card-img-top"/>
+            <img src={c6} alt="bo" className="card-img-top"/>
               </a>
               
              <div className="card-body">
@@ -186,7 +194,7 @@ export default function Home() {
     <div className="card">
     <a href="https://maps.app.goo.gl/e9p6hr2WNqNPU19V9">
       
-            <img src={c1} alt="bo" className="card-img-top"/>
+            <img src={c7} alt="bo" className="card-img-top"/>
               </a>
               
              <div className="card-body">
@@ -200,7 +208,7 @@ export default function Home() {
     <div className="card">
     <a href="https://maps.app.goo.gl/e9p6hr2WNqNPU19V9">
       
-            <img src={c2} alt="bo" className="card-img-top"/>
+            <img src={c8} alt="bo" className="card-img-top"/>
               </a>
               
              <div className="card-body">
@@ -215,7 +223,7 @@ export default function Home() {
     <div className="card">
     <a href="https://maps.app.goo.gl/e9p6hr2WNqNPU19V9">
       
-            <img src={c1} alt="bo" className="card-img-top"/>
+            <img src={c9} alt="bo" className="card-img-top"/>
               </a>
               
              <div className="card-body">
