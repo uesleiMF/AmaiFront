@@ -29,32 +29,14 @@ export default function Navbar() {
             <span>Sobre Nos</span>
           </a>
         </li>
-        {
-          token ? (
-            <li>
-              <a href="/cadastro">
-              <FaRegUser />
-              <span>Cadastro de Produtos</span>
-            </a>
-            </li>
-             
-          ) : (
-            <>
-            </>
-          )
-        }
+      
         <li>
-          {token ? (
-            <a href="/profile">
-              <FaRegUser />
-              <span>Perfil</span>
-            </a>
-          ) : (
+        
             <a href="/login">
               <FaRegUser />
               <span>Login</span>
             </a>
-          )}
+      
         </li>
       </List>
     </Container>

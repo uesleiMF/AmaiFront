@@ -42,7 +42,7 @@ const Cadastro = () => {
       console.log(result.error);
     }else {
       alert(result.message);
-      navigate('/cadastro');
+      navigate('/login');
     }
   }
 

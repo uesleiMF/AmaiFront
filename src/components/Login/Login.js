@@ -1,38 +1,51 @@
-import { Container, LoginContainer, LostPass } from './styles';
-import React, { useState } from "react";
-import axios from "axios";
+import { LoginContainer, LostPass } from './styles';
+
 import { toast } from "react-toastify";
 import './style.css';
-import { useNavigate } from "react-router-dom";
+
 import "bootstrap/dist/css/bootstrap.min.css";
+import { Button, TextField, Link } from '@material-ui/core';
+import React, { Component } from 'react';
+import swal from 'sweetalert';
 
-const Login = (props) => {
-  const navigate = useNavigate();
-  const [emailLogin, setEmailLogin] = useState("");
-  const [senha, setSenha] = useState("");
+const axios = require('axios');
+const bcrypt = require('bcryptjs');
+var salt = bcrypt.genSaltSync(10);
 
-  function reload() {
-    window.location.reload()
+export default class Login extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      username: '',
+      password: ''
+    };
   }
 
-  const handleSubmit = async (event) => {
-    event.preventDefault();
+  onChange = (e) => this.setState({ [e.target.name]: e.target.value });
 
-    const login = {
-      email: emailLogin,
-      password: senha,
-    };
-    
- 
+  login = () => {
 
-    axios.post("https://back-end-test-t.herokuapp.com/users", login).then((response) => {
-      const token = response.data.token;
-      localStorage.setItem("token", token);
+    const pwd = bcrypt.hashSync(this.state.password, salt);
+
+    axios.post('https://listpr.herokuapp.com/login', {
+      username: this.state.username,
+      password: pwd,
+    }).then((res) => {
+      localStorage.setItem('token', res.data.token);
+      localStorage.setItem('user_id', res.data.id);
+      this.props.history.push('/cadastro');
+    }).catch((err) => {
+      if (err.response && err.response.data && err.response.data.errorMessage) {
+        swal({
+          text: err.response.data.errorMessage,
+          icon: "error",
+          type: "error"
+        });
+      }
     });
+  }
 
-    navigate("/home");
-  };
-
+  render() {
   return (
     
     <div className="container">
@@ -47,30 +60,38 @@ const Login = (props) => {
       </div>
       
       <LoginContainer>
-      <form className="mx-8" onSubmit={handleSubmit}>
+      <form className="mx-8" >
         <input
-          required
-          type="email"
-          placeholder="E-mail"
-          id="emailLogin"
-          className="mx-4 w-48 text-black"
-          onChange={(event) => setEmailLogin(event.target.value)}
-        />
+         id="standard-basic"
+         type="text"
+         autoComplete="off"
+         name="username"
+         value={this.state.username}
+         onChange={this.onChange}
+         placeholder="User Name"
+         required
+       />
+       <br /><b    />
         <input
+          id="standard-basic"
           type="password"
-          required
-          placeholder="Senha"
-          id="senha"
-          className="mx-4 w-48 text-black"
-          onChange={(event) => setSenha(event.target.value)}
-        />
+          autoComplete="off"
+          name="password"
+          value={this.state.password}
+          onChange={this.onChange}
+          placeholder="Password"
+          required      />
         
-          <LostPass>
-            <a href='!#'>
-              <span class="senhaLogin">Esqueceu sua senha?</span>
-            </a>
-            <input type='submit' value='Acessar!' class="submitButton"/>
-          </LostPass>
+        <Button
+            className="button_style"
+            variant="contained"
+            color="primary"
+            size="small"
+            disabled={this.state.username == '' && this.state.password == ''}
+            onClick={this.login}
+          >
+            Login
+          </Button> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         </form>
 
              </LoginContainer>
@@ -78,4 +99,4 @@ const Login = (props) => {
   </div>
   );
 };
-export default Login;
+}

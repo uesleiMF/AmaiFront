@@ -11,9 +11,8 @@ import Edit from "./pages/Edit/Edit";
 import CadProd from "./pages/CadProd/Cadprod";
 import Cadastro from "./pages/Cadastro/Cadastro";
 import Cadu from './pages/Cadu/Cadu';
-//import Login from "./pages/Login/Login";
-//import Dashboard from "./pages/Dashboard/Dashboard";
-//import Register from "./pages/Register/Register";
+import Login from "./components/Login/Login";
+import Register from "./components/Register/Register";
 
 
 
@@ -29,6 +28,8 @@ ReactDOM.render(
          
          
         <Route path="/" element={<Home/>} />
+        <Route path="/login" element={<Login/>} />
+        <Route path="/register" element={<Register/>} />
         <Route path="/sobrenos" element={<Sobrenos />} />
         <Route path="/view/:id" element={<View />} />
         <Route path="/edit/:id" element={<Edit />} />
