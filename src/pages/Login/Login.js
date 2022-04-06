@@ -1,13 +1,6 @@
-import { LoginContainer, LostPass } from './styles';
-
-import { toast } from "react-toastify";
-import './style.css';
-
-import "bootstrap/dist/css/bootstrap.min.css";
-import { Button, TextField, Link } from '@material-ui/core';
 import React, { Component } from 'react';
 import swal from 'sweetalert';
-
+import { Button, TextField, Link } from '@material-ui/core';
 const axios = require('axios');
 const bcrypt = require('bcryptjs');
 var salt = bcrypt.genSaltSync(10);
@@ -33,7 +26,7 @@ export default class Login extends Component {
     }).then((res) => {
       localStorage.setItem('token', res.data.token);
       localStorage.setItem('user_id', res.data.id);
-      this.props.history.push('/cadastro');
+      this.props.history.push("/cadastro");
     }).catch((err) => {
       if (err.response && err.response.data && err.response.data.errorMessage) {
         swal({
@@ -46,43 +39,36 @@ export default class Login extends Component {
   }
 
   render() {
-  return (
-    
-    <div className="container">
-    <div className="card mt-2 bg-warning">
-      <div className="card-title">
-        <div className="row">
-          <div className="col">
-            
-            <h3 className="mx-3 my-3 text-center">Acessar Conta</h3>
-          </div>
+    return (
+      <div style={{ marginTop: '200px' }}>
+        <div>
+          <h2>Login</h2>
         </div>
-      </div>
-      
-      <LoginContainer>
-      <form className="mx-8" >
-        <input
-         id="standard-basic"
-         type="text"
-         autoComplete="off"
-         name="username"
-         value={this.state.username}
-         onChange={this.onChange}
-         placeholder="User Name"
-         required
-       />
-       <br /><b    />
-        <input
-          id="standard-basic"
-          type="password"
-          autoComplete="off"
-          name="password"
-          value={this.state.password}
-          onChange={this.onChange}
-          placeholder="Password"
-          required      />
-        
-        <Button
+
+        <div>
+          <TextField
+            id="standard-basic"
+            type="text"
+            autoComplete="off"
+            name="username"
+            value={this.state.username}
+            onChange={this.onChange}
+            placeholder="User Name"
+            required
+          />
+          <br /><br />
+          <TextField
+            id="standard-basic"
+            type="password"
+            autoComplete="off"
+            name="password"
+            value={this.state.password}
+            onChange={this.onChange}
+            placeholder="Password"
+            required
+          />
+          <br /><br />
+          <Button
             className="button_style"
             variant="contained"
             color="primary"
@@ -92,11 +78,11 @@ export default class Login extends Component {
           >
             Login
           </Button> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        </form>
-
-             </LoginContainer>
-  </div>
-  </div>
-  );
-};
+          <Link href="/register">
+            Register
+          </Link>
+        </div>
+      </div>
+    );
+  }
 }

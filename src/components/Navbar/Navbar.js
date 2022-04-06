@@ -16,7 +16,7 @@ export default function Navbar() {
     <Container>
       <List>
         <li>
-          <a href="/">
+          <a href="/home">
             <FaHeart />
             <span>Home</span>
           </a>
@@ -32,7 +32,7 @@ export default function Navbar() {
       
         <li>
         
-            <a href="/login">
+            <a href="/">
               <FaRegUser />
               <span>Login</span>
             </a>

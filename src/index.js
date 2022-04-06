@@ -1,7 +1,9 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import { GlobalStyle } from "./styles/global";
-import { BrowserRouter,  Routes, Route} from "react-router-dom";
+import { Routes, Route } from 'react-router';
+import { BrowserRouter} from "react-router-dom";
+
 import Navbar from "./components/Navbar/Navbar";
 import Footer from "./components/Footer/Footer";
 import Home from "./pages/Home/Home";
@@ -11,8 +13,9 @@ import Edit from "./pages/Edit/Edit";
 import CadProd from "./pages/CadProd/Cadprod";
 import Cadastro from "./pages/Cadastro/Cadastro";
 import Cadu from './pages/Cadu/Cadu';
-import Login from "./components/Login/Login";
-import Register from "./components/Register/Register";
+import Login from "./pages/Login/Login";
+import Register from "./pages/Register/Register";
+import Dashboard from "./pages/Dashboard/Dashboard";
 
 
 
@@ -25,11 +28,12 @@ ReactDOM.render(
      
     <Routes>
             
+         <Route exact path="/" element={<Login/>} />
+        <Route exact path="/register" element={<Register/>} />
+         <Route path="/dashboard" element={<Dashboard/>} />
+          
          
-         
-        <Route path="/" element={<Home/>} />
-        <Route path="/login" element={<Login/>} />
-        <Route path="/register" element={<Register/>} />
+        <Route path="/home" element ={<Home />} />
         <Route path="/sobrenos" element={<Sobrenos />} />
         <Route path="/view/:id" element={<View />} />
         <Route path="/edit/:id" element={<Edit />} />
