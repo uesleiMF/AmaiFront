@@ -2,7 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom";
 import { GlobalStyle } from "./styles/global";
 import { Routes, Route } from 'react-router';
-import { BrowserRouter} from "react-router-dom";
+import { BrowserRouter, Navigate} from "react-router-dom";
 
 import Navbar from "./components/Navbar/Navbar";
 import Footer from "./components/Footer/Footer";
@@ -14,9 +14,11 @@ import CadProd from "./pages/CadProd/Cadprod";
 import Cadastro from "./pages/Cadastro/Cadastro";
 import Cadu from './pages/Cadu/Cadu';
 import Login from "./pages/Login/Login";
-import Register from "./pages/Register/Register";
-import Dashboard from "./pages/Dashboard/Dashboard";
+import Main from "./pages/Main/index";
+import Signup from "./pages/Singup/index";
+import "./index.css";
 
+	const user = localStorage.getItem("token");
 
 
 
@@ -27,11 +29,12 @@ ReactDOM.render(
     <BrowserRouter>
      
     <Routes>
-            
-         <Route exact path="/" element={<Login/>} />
-        <Route exact path="/register" element={<Register/>} />
-         <Route path="/dashboard" element={<Dashboard/>} />
-          
+    
+			{user && <Route path="/" exact element={<Main />} />}
+			<Route path="/signup" exact element={<Signup />} />
+			<Route path="/login" exact element={<Login />} />
+			<Route path="/" element={<Navigate replace to="/login" />} />
+		
          
         <Route path="/home" element ={<Home />} />
         <Route path="/sobrenos" element={<Sobrenos />} />
