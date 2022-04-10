@@ -2,6 +2,8 @@ import { useState } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
 import styles from "./styles.module.css";
+import "bootstrap/dist/css/bootstrap.min.css";
+import "./style.css";
 
 const Login = () => {
 	const [data, setData] = useState({ email: "", password: "" });
@@ -30,11 +32,13 @@ const Login = () => {
 	};
 
 	return (
-		<div className={styles.login_container}>
-			<div className={styles.login_form_container}>
-				<div className={styles.left}>
+		<div className="container">
+      <div className="card mt-2 bg-warning">
+        <div className="card-title">
+          <div className="row">
+            <div className="col">
 					<form className={styles.form_container} onSubmit={handleSubmit}>
-						<h1>Login to Your Account</h1>
+						<h4>Login to Your Account</h4>
 						<input
 							type="email"
 							placeholder="Email"
@@ -60,7 +64,7 @@ const Login = () => {
 					</form>
 				</div>
 				<div className={styles.right}>
-					<h1>New Here ?</h1>
+					<h4>New Here ?</h4>
 					<Link to="/signup">
 						<button type="button" className={styles.white_btn}>
 							Sing Up
@@ -69,6 +73,9 @@ const Login = () => {
 				</div>
 			</div>
 		</div>
+		</div>
+		</div>
+		
 	);
 };
 

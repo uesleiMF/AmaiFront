@@ -2,7 +2,7 @@ import { useState } from "react";
 import axios from "axios";
 import { Link, useNavigate } from "react-router-dom";
 import styles from "./styles.module.css";
-
+import "bootstrap/dist/css/bootstrap.min.css";
 const Signup = () => {
 	const [data, setData] = useState({
 		firstName: "",
@@ -36,10 +36,12 @@ const Signup = () => {
 	};
 
 	return (
-		<div className={styles.signup_container}>
-			<div className={styles.signup_form_container}>
-				<div className={styles.left}>
-					<h1>Welcome Back</h1>
+		<div className="container">
+		<div className="card mt-2 bg-warning">
+		  <div className="card-title">
+			<div className="row">
+			  <div className="col">
+					<h3>Welcome Back</h3>
 					<Link to="/login">
 						<button type="button" className={styles.white_btn}>
 							Sing in
@@ -48,7 +50,7 @@ const Signup = () => {
 				</div>
 				<div className={styles.right}>
 					<form className={styles.form_container} onSubmit={handleSubmit}>
-						<h1>Create Account</h1>
+						<h4>Create Account</h4>
 						<input
 							type="text"
 							placeholder="First Name"
@@ -92,6 +94,8 @@ const Signup = () => {
 					</form>
 				</div>
 			</div>
+		</div>
+		</div>
 		</div>
 	);
 };
