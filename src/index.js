@@ -13,12 +13,14 @@ import Edit from "./pages/Edit/Edit";
 import CadProd from "./pages/CadProd/Cadprod";
 import Cadastro from "./pages/Cadastro/Cadastro";
 import Cadu from './pages/Cadu/Cadu';
-import Login from "./pages/Login/Login";
+import Login from "./pages/Login";
 import Main from "./pages/Main/index";
 import Signup from "./pages/Singup/index";
 import "./index.css";
 
-	const user = localStorage.getItem("token");
+
+const user = localStorage.getItem("token");
+
 
 
 
@@ -53,4 +55,7 @@ ReactDOM.render(
     <Footer />
   </React.StrictMode>,
   document.getElementById("root")
-);
+ 
+  );
+
+ 
