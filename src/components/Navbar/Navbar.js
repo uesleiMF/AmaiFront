@@ -28,7 +28,7 @@ export default function Navbar() {
             <li>
               <a href="/cadastro">
               <FaRegUser />
-              <span>Gerenciamento de produtos</span>
+              <span>Gerenciamento/Casais</span>
             </a>
             </li>
           ) : (
@@ -37,17 +37,14 @@ export default function Navbar() {
           )
         }
         <li>
-          {token ? (
-            <a href="/login">
-              <FaRegUser />
-              <span>Perfil</span>
-            </a>
-          ) : (
+         
             <a href="/login">
               <FaRegUser />
               <span>Login</span>
             </a>
-          )}
+        
+           
+          
         </li>
       </List>
     </Container>
