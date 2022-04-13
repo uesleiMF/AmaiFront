@@ -10,12 +10,12 @@ import Home from "./pages/Home/Home";
 import Sobrenos from "./pages/Sobrenos/Sobrenos";
 import View from "./pages/View/View";
 import Edit from "./pages/Edit/Edit";
-import CadProd from "./pages/CadProd/Cadprod";
 import Cadastro from "./pages/Cadastro/Cadastro";
-import Cadu from './pages/Cadu/Cadu';
 import Login from "./pages/Login";
 import Main from "./pages/Main/index";
 import Signup from "./pages/Singup/index";
+
+
 import "./index.css";
 
 
@@ -42,9 +42,8 @@ ReactDOM.render(
         <Route path="/sobrenos" element={<Sobrenos />} />
         <Route path="/view/:id" element={<View />} />
         <Route path="/edit/:id" element={<Edit />} />
-        <Route path="/cadu" element={<Cadu/>}/>
         <Route path="/cadastro" element={<Cadastro />} />
-        <Route path="/cadprod" element={<CadProd />} />
+      
         
             
        

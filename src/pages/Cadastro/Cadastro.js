@@ -1,7 +1,6 @@
 import React from "react";
 import Api from "../../api/api";
 import { useNavigate } from "react-router-dom";
-import styles from "./styles.module.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import ListProdut from "../../components/structure/ListProdut";
 import "./styles.css";
@@ -10,10 +9,7 @@ import "./styles.css";
 
 const Cadastro = () => {
   
-  const handleLogout = () => {
-		localStorage.removeItem("token");
-		window.location.reload();
-	};
+ 
   
   
   
@@ -50,7 +46,7 @@ const Cadastro = () => {
       console.log(result.error);
     }else {
       alert(result.message);
-      navigate('/login');
+      navigate('/cadastro');
     }
   }
 
@@ -118,9 +114,7 @@ const Cadastro = () => {
               <div className="col-5 d-flex align-items-end justify-content-around">
                 <button type="submit" className="btn btn-success">Enviar</button>
                 <button type="reset" className="btn btn-danger">Limpar</button>
-                <button className={styles.white_btn} onClick={handleLogout}>
-					Logout
-				</button>
+               
               </div>
             </div>
                     
