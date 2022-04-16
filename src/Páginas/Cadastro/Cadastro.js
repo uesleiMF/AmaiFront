@@ -1,7 +1,8 @@
 import React from 'react'
 import Api from '../../api/api';
 import { useNavigate } from 'react-router-dom';
-
+import  "bootstrap/dist/css/bootstrap.min.css" ;
+importar  ListProdut  de  "../../components/structure/ListProdut" ;
 const Cadastro = () => {
   const navigate = useNavigate();
   
