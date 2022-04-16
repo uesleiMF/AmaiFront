@@ -114,7 +114,14 @@ const Cadastro = () => {
       </div>
       </div>
     
-
+<div>
+            <h3 className="mx-3 my-3 text-center">
+                      Produtos Cadastrados
+                    </h3>
+                  </div>
+              
+                <ListProdut/>
+              </div>
 
 
 
