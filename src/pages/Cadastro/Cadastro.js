@@ -1,18 +1,8 @@
-import React from "react";
-import Api from "../../api/api";
-import { useNavigate } from "react-router-dom";
-import "bootstrap/dist/css/bootstrap.min.css";
-import ListProdut from "../../components/structure/ListProdut";
-import "./styles.css";
-
-
+import React from 'react'
+import Api from '../../api/api';
+import { useNavigate } from 'react-router-dom';
 
 const Cadastro = () => {
-  
- 
-  
-  
-  
   const navigate = useNavigate();
   
   const handleSubmit = async (evento) => {
@@ -46,7 +36,7 @@ const Cadastro = () => {
       console.log(result.error);
     }else {
       alert(result.message);
-      navigate('/cadastro');
+      navigate('/');
     }
   }
 
@@ -114,7 +104,6 @@ const Cadastro = () => {
               <div className="col-5 d-flex align-items-end justify-content-around">
                 <button type="submit" className="btn btn-success">Enviar</button>
                 <button type="reset" className="btn btn-danger">Limpar</button>
-               
               </div>
             </div>
                     
@@ -122,19 +111,16 @@ const Cadastro = () => {
           </form>
         </div>
       </div>
+      </div>
     
 
-        <div>
-            <h3 className="mx-3 my-3 text-center">
-                      Produtos Cadastrados
-                    </h3>
-                  </div>
-              
-                <ListProdut/>
-              </div>
 
-        
-      
-  );
+
+
+
+  )
 }
+
+
+
 export default Cadastro
