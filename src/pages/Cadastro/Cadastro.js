@@ -54,7 +54,7 @@ const Cadastro = () => {
           <div className="row">
             <div className="col">
               
-              <h3 className="mx-3 my-3 text-center">Cadastro de Produtos</h3>
+              <h3 className="mx-3 my-3 text-center">Cadastrar Casais</h3>
             </div>
           </div>
         </div>
@@ -63,26 +63,26 @@ const Cadastro = () => {
             <div className="row mb-3">
               <div className="col-5">
                 <div className="form-group">
-                  <label htmlFor="titulo">Titulo:</label>
-                  <input id="titulo" className="form-control" type="text" placeholder="Nome do Produto" name="titulo"/>
+                  <label htmlFor="titulo">Nome:</label>
+                  <input id="titulo" className="form-control" type="text" placeholder="Nome dos Casais" name="titulo"/>
                 </div>
               </div>
               <div className="col-5">
                 <div className="form-group">
                   <label htmlFor="descricao">Descrição:</label>
-                  <input id="descricao" type="text" className="form-control" placeholder="Descrição do Produto" name="descricao"/>
+                  <input id="descricao" type="text" className="form-control" placeholder="Descrição" name="descricao"/>
                 </div>
               </div>
               <div className="col-5">
                 <div className="form-group">
                   <label htmlFor="prioridade">Prioridade :</label>
-                  <input id="prioridade" type="text" className="form-control" placeholder="(Ruim) (Bom) (Otimo)" name="prioridade"/>
+                  <input id="prioridade" type="text" className="form-control" placeholder=" " name="prioridade"/>
                 </div>
               </div>
             <div className="col-5">
                 <div className="form-group">
                   <label htmlFor="status">Status :</label>
-                  <input id="status" type="text" className="form-control" placeholder="(Tipo1) (Tipo2) (Fora do Tipo)" name="status"/>
+                  <input id="status" type="text" className="form-control" placeholder=" " name="status"/>
                 </div>
               </div>
             
@@ -94,14 +94,14 @@ const Cadastro = () => {
               </div>
               <div className="col-5">
                 <div className="form-group">
-                  <label htmlFor="prazo">Data de Validade:</label>
-                  <input id="prazo" type="date" className="form-control" placeholder="Data de Vencimento" name="prazo"/>
+                  <label htmlFor="prazo">Aniversario:</label>
+                  <input id="prazo" type="date" className="form-control" placeholder="Aniversario" name="prazo"/>
                 </div>
               </div>
               <div className="col-5">
                 <div className="form-group">
-                  <label htmlFor="data">Data de Fabricação:</label>
-                  <input id="data" type="date" className="form-control"  placeholder="Data Fabricação" name="data"/>
+                  <label htmlFor="data">Data:</label>
+                  <input id="data" type="date" className="form-control"  placeholder="Data " name="data"/>
                 </div>
               </div>
             
@@ -118,15 +118,20 @@ const Cadastro = () => {
       </div>
     
 
-        <div>
-            <h3 className="mx-3 my-3 text-center">
-                      Produtos Cadastrados
-                    </h3>
-                  </div>
+      <div className="card mt-2 bg-warning">
+        <div className="card-title">
+          <div className="row">
+            <div className="col">
+              
+              <h3 className="mx-3 my-3 text-center">Casais Cadastrados</h3>
+            </div>
+         
               
                 <ListProdut/>
               </div>
-
+              </div>
+ </div>
+        </div>
         
       
   
