@@ -55,7 +55,7 @@ const Edit = () => {
         <div className="card-title ">
           <div className="row">
             <div className="col">
-              <h3 className="mx-3 my-3">Edição do Produto</h3>
+              <h3 className="mx-3 my-3">Edição do Casal</h3>
             </div>
           </div>
         </div>
@@ -64,12 +64,12 @@ const Edit = () => {
             <div className="row mb-4">
               <div className="col-4">
                 <div className="form-group">
-                  <label htmlFor="titulo">Titulo:</label>
+                  <label htmlFor="titulo">Nome:</label>
                   <input
                     id="titulo"
                     className="form-control"
                     type="text"
-                    placeholder="Nome do Produto"
+                    placeholder="Nome"
                     value={produto.titulo}
                     onChange={handleFieldsChange}
                     name="titulo"
@@ -78,13 +78,13 @@ const Edit = () => {
               </div>
               <div className="col-4">
                 <div className="form-group">
-                  <label htmlFor="descricao">Descrição do produto:</label>
+                  <label htmlFor="descricao">Descrição :</label>
                   <input
                   
                     id="descricao"
                     type="text"
                     className="form-control"
-                    placeholder="Descrição do Produto"
+                    placeholder="Descrição"
                     value={produto.descricao}
                     onChange={handleFieldsChange}
                     name="descricao"
@@ -94,14 +94,14 @@ const Edit = () => {
               </div>
               <div className="col-4">
                 <div className="form-group">
-                  <label htmlFor="prioridade">Prioridade do Produto:</label>
+                  <label htmlFor="prioridade">Prio:</label>
                   <input
                     id="prioridade"
                     type="text"
                     className="form-control"
                     value={produto.prioridade}
                     onChange={handleFieldsChange}
-                    placeholder="ruim bom otimo"
+                    placeholder=" "
                     name="prioridade"
                   />
                 </div>
@@ -110,42 +110,42 @@ const Edit = () => {
             <div className="row">
               <div className="col-4">
                 <div className="form-group">
-                  <label htmlFor="capa">Link do Produto:</label>
+                  <label htmlFor="capa">Link imagens do casal:</label>
                   <input
                     id="capa"
                     type="text"
                     value={produto.capa}
                     onChange={handleFieldsChange}
                     className="form-control"
-                    placeholder="URL da Produto"
+                    placeholder="link"
                     name="capa"
                   />
                 </div>
               </div>
               <div className="col-4">
                 <div className="form-group">
-                  <label htmlFor="prazo">Validade do produto:</label>
+                  <label htmlFor="prazo">Aniversario:</label>
                   <input
                     id="prazo"
                     type="date"
                     value={produto.prazo}
                     onChange={handleFieldsChange}
                     className="form-control"
-                    placeholder="Validade"
+                    placeholder="Aniversario"
                     name="prazo"
                   />
                 </div>
               </div>
               <div className="col-4">
                 <div className="form-group">
-                  <label htmlFor="data">Validade :</label>
+                  <label htmlFor="data">Data:</label>
                   <input
                     id="data"
                     type="date"
                     value={produto.data}
                     onChange={handleFieldsChange}
                     className="form-control"
-                    placeholder="Validade"
+                    placeholder="Data"
                     name="data"
                   />
                 </div>
