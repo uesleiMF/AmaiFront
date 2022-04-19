@@ -1,18 +1,10 @@
 import { Container,List } from "./styles";
 import {FaHeart,FaRegUser,FaUserPlus} from "react-icons/fa";
-import styles from "./styles.module.css";
 
 export default function Navbar() {
   const token = localStorage.getItem("token");
 
-  console.log(token)
   
-  const handleLogout = () => {
-		localStorage.removeItem("token");
-		window.location.reload();
-    
-	};
-
   return (
     <Container>
       <List>
@@ -54,10 +46,7 @@ export default function Navbar() {
         </li>
 
 
-        <button className={styles.white_btn} onClick={handleLogout}>
-					Logout
-				</button>
-
+     
 
       </List>
     </Container>
