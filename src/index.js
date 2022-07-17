@@ -14,7 +14,6 @@ import Cadastro from "./pages/Cadastro/Cadastro";
 import Login from "./pages/Login";
 import Main from "./pages/Main/index";
 import Signup from "./pages/Singup/index";
-import Dashboard from "./pages/Dashboard/Dashboard";
 
 import "./index.css";
 
@@ -42,8 +41,7 @@ ReactDOM.render(
         <Route path="/sobrenos" element={<Sobrenos />} />
         <Route path="/view/:id" element={<View />} />
         <Route path="/edit/:id" element={<Edit />} />
-        <Route path="/dashboard" element={<Dashboard/>} />
-        <Route path="/cadastro" element={<Cadastro />} />
+         <Route path="/cadastro" element={<Cadastro />} />
       
         
             

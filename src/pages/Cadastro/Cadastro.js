@@ -32,6 +32,10 @@ const Cadastro = () => {
       prazo
     }
 
+
+
+
+    
     const request = await Api.fetchPost(produto);
     if(request.status === 500) {
       alert('ERRO NO SERVIDOR')
