@@ -22,7 +22,7 @@ const Signup = () => {
 		try {
 			const url = "https://back-end-test-t.herokuapp.com/api/users";
 			const { data: res } = await axios.post(url, data);
-			navigate("/login");
+			navigate("/");
 			console.log(res.message);
 		} catch (error) {
 			if (
