@@ -20,7 +20,7 @@ const Login = () => {
 			const { data: res } = await axios.post(url, data);
 			localStorage.setItem("token", res.data);
 			  localStorage.setItem('user_id', res.data.id);
-           this.props.history.push('/cadastro');
+           this.props.history.push('/Cadastro');
 			
 		 //window.location ="/cadastro";
 
