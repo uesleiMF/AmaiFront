@@ -19,8 +19,15 @@ const Login = () => {
 			const url = "https://back-end-test-t.herokuapp.com/api/auth";
 			const { data: res } = await axios.post(url, data);
 			localStorage.setItem("token", res.data);
-			window.location ="/cadastro";
-		} catch (error) {
+			  localStorage.setItem('user_id', res.data.id);
+           this.props.history.push('/cadastro');
+			
+		 //window.location ="/cadastro";
+
+		   
+	
+	
+	} catch (error) {
 			if (
 				error.response &&
 				error.response.status >= 400 &&
