@@ -38,7 +38,7 @@ ReactDOM.render(
          
         <Route path="/home" element ={<Home />} />
         <Route path="/sobrenos" element={<Sobrenos />} />
-                <Route path="/Cadastro" element={<Cadastro />} />
+                <Route path="/cadastro" element={<Cadastro />} />
       
         
             
