@@ -10,7 +10,7 @@ import Home from "./pages/Home/Home";
 import Sobrenos from "./pages/Sobrenos/Sobrenos";
 
 import Cadastro from "./pages/Cadastro/Cadastro";
-import Login from "./pages/Login";
+import Login from "./pages/Login/index";
 import Main from "./pages/Main/index";
 import Signup from "./pages/Singup/index";
 

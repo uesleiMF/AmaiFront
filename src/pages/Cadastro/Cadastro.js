@@ -1,30 +1,30 @@
-import React,{Component} from 'react';
+import React, { Component } from 'react';
 import {
-  Button, TextField, Dialog, DialogActions, LinearProgress,
+  Button, TextField, Dialog, DialogActions,
   DialogTitle, DialogContent, TableBody, Table,
-  TableContainer, TableHead, TableRow, TableCell
+  TableContainer, TableHead, TableRow, TableCell,CircularProgress,
 } from '@material-ui/core';
 import { Pagination } from '@material-ui/lab';
 import swal from 'sweetalert';
 const axios = require('axios');
-
-export default class Cadastro extends Component {
+export default class Dashboard extends Component {
   constructor() {
     super();
     this.state = {
       token: '',
-      openProductModal: false,
-      openProductEditModal: false,
+      openCasalModal: false,
+      openCasalEditModal: false,
       id: '',
       name: '',
       desc: '',
-      price: '',
-      discount: '',
+      tel:'',
+      niverH: '',
+      niverM: '',
       file: '',
       fileName: '',
       page: 1,
       search: '',
-      products: [],
+      casais: [],
       pages: 0,
       loading: false
     };
@@ -36,12 +36,12 @@ export default class Cadastro extends Component {
       this.props.history.push('/login');
     } else {
       this.setState({ token: token }, () => {
-        this.getProduct();
+        this.getCasal();
       });
     }
   }
 
-  getProduct = () => {
+  getCasal = () => {
     
     this.setState({ loading: true });
 
@@ -50,24 +50,24 @@ export default class Cadastro extends Component {
     if (this.state.search) {
       data = `${data}&search=${this.state.search}`;
     }
-    axios.get(` https://back-end-test-t.herokuapp.com/get-product${data}`, {
+    axios.get(`https://projeto----amai.herokuapp.com/get-casal${data}`, {
       headers: {
         'token': this.state.token
       }
     }).then((res) => {
-      this.setState({ loading: false, products: res.data.products, pages: res.data.pages });
+      this.setState({ loading: false, casais: res.data.casais, pages: res.data.pages });
     }).catch((err) => {
       swal({
         text: err.response.data.errorMessage,
         icon: "error",
         type: "error"
       });
-      this.setState({ loading: false, products: [], pages: 0 },()=>{});
+      this.setState({ loading: false, casais: [], pages: 0 },()=>{});
     });
   }
 
-  deleteProduct = (id) => {
-    axios.post('https://back-end-test-t.herokuapp.com/delete-product', {
+  deleteCasal = (id) => {
+    axios.post('https://projeto----amai.herokuapp.com/delete-casal', {
       id: id
     }, {
       headers: {
@@ -96,7 +96,7 @@ export default class Cadastro extends Component {
 
   pageChange = (e, page) => {
     this.setState({ page: page }, () => {
-      this.getProduct();
+      this.getCasal();
     });
   }
 
@@ -112,21 +112,22 @@ export default class Cadastro extends Component {
     this.setState({ [e.target.name]: e.target.value }, () => { });
     if (e.target.name === 'search') {
       this.setState({ page: 1 }, () => {
-        this.getProduct();
+        this.getCasal();
       });
     }
   };
 
-  addProduct = () => {
+  addCasal = () => {
     const fileInput = document.querySelector("#fileInput");
     const file = new FormData();
     file.append('file', fileInput.files[0]);
     file.append('name', this.state.name);
     file.append('desc', this.state.desc);
-    file.append('discount', this.state.discount);
-    file.append('price', this.state.price);
+    file.append('tel', this.state.tel);
+    file.append('niverH', this.state.niverH);
+    file.append('niverM', this.state.niverM);
 
-    axios.post('https://back-end-test-t.herokuapp.com/add-product', file, {
+    axios.post('https://projeto----amai.herokuapp.com/add-casal', file, {
       headers: {
         'content-type': 'multipart/form-data',
         'token': this.state.token
@@ -139,9 +140,9 @@ export default class Cadastro extends Component {
         type: "success"
       });
 
-      this.handleProductClose();
-      this.setState({ name: '', desc: '', discount: '', price: '', file: null, page: 1 }, () => {
-        this.getProduct();
+      this.handleCasalClose();
+      this.setState({ name: '', desc: '',  tel: '', niverH: '', niverM: '',  file: null, page: 1 }, () => {
+        this.getCasal();
       });
     }).catch((err) => {
       swal({
@@ -149,22 +150,26 @@ export default class Cadastro extends Component {
         icon: "error",
         type: "error"
       });
-      this.handleProductClose();
+      this.handleCasalClose();
     });
 
   }
 
-  updateProduct = () => {
+  updateCasal = () => {
     const fileInput = document.querySelector("#fileInput");
     const file = new FormData();
     file.append('id', this.state.id);
     file.append('file', fileInput.files[0]);
     file.append('name', this.state.name);
     file.append('desc', this.state.desc);
-    file.append('discount', this.state.discount);
-    file.append('price', this.state.price);
+    file.append('tel', this.state.tel);
+    file.append('niverH', this.state.niverH);
+    file.append('niverM', this.state.niverM);
+   
+   
 
-    axios.post('https://back-end-test-t.herokuapp.com/update-product', file, {
+
+    axios.post('https://projeto----amai.herokuapp.com/update-casal', file, {
       headers: {
         'content-type': 'multipart/form-data',
         'token': this.state.token
@@ -177,9 +182,9 @@ export default class Cadastro extends Component {
         type: "success"
       });
 
-      this.handleProductEditClose();
-      this.setState({ name: '', desc: '', discount: '', price: '', file: null }, () => {
-        this.getProduct();
+      this.handleCasaltEditClose();
+      this.setState({ name: '', desc: '',tel:'', niverH: '', niverM: '',  file: null }, () => {
+        this.getCasal();
       });
     }).catch((err) => {
       swal({
@@ -187,57 +192,60 @@ export default class Cadastro extends Component {
         icon: "error",
         type: "error"
       });
-      this.handleProductEditClose();
+      this.handleCasaltEditClose();
     });
 
   }
 
-  handleProductOpen = () => {
+  handleCasalOpen = () => {
     this.setState({
-      openProductModal: true,
+      openCasalModal: true,
       id: '',
       name: '',
       desc: '',
-      price: '',
-      discount: '',
+      tel:'',
+      niverH: '',
+      niverM: '',
       fileName: ''
     });
   };
 
-  handleProductClose = () => {
-    this.setState({ openProductModal: false });
+  handleCasalClose = () => {
+    this.setState({ openCasalModal: false });
   };
 
-  handleProductEditOpen = (data) => {
+  handleCasalEditOpen = (data) => {
     this.setState({
-      openProductEditModal: true,
+      openCasalEditModal: true,
       id: data._id,
       name: data.name,
       desc: data.desc,
-      price: data.price,
-      discount: data.discount,
+      tel: data.tel,
+      niverH: data.niverH,
+      niverM: data.niverM,
+     
       fileName: data.image
     });
   };
 
-  handleProductEditClose = () => {
-    this.setState({ openProductEditModal: false });
+  handleCasaltEditClose = () => {
+    this.setState({ openCasalEditModal: false });
   };
 
   render() {
     return (
       <div>
-        {this.state.loading && <LinearProgress size={40} />}
+        {this.state.loading && <CircularProgress color="inherit" />}
         <div>
-          <h2>Dashboard</h2>
+          <h2>CELULAS DE  CASAIS</h2>
           <Button
             className="button_style"
             variant="contained"
             color="primary"
             size="small"
-            onClick={this.handleProductOpen}
+            onClick={this.handleCasalOpen}
           >
-            Add Product
+            Adicionar Casais
           </Button>
           <Button
             className="button_style"
@@ -245,19 +253,18 @@ export default class Cadastro extends Component {
             size="small"
             onClick={this.logOut}
           >
-            Log Out
+            Sair
           </Button>
-          
         </div>
 
-        {/* Edit Product */}
+        {/* Edit Casais */}
         <Dialog
-          open={this.state.openProductEditModal}
-          onClose={this.handleProductClose}
+          open={this.state.openCasalEditModal}
+          onClose={this.handleCasalClose}
           aria-labelledby="alert-dialog-title"
           aria-describedby="alert-dialog-description"
         >
-          <DialogTitle id="alert-dialog-title">Edit Product</DialogTitle>
+          <DialogTitle id="alert-dialog-title">Editar Casais</DialogTitle>
           <DialogContent>
             <TextField
               id="standard-basic"
@@ -266,7 +273,7 @@ export default class Cadastro extends Component {
               name="name"
               value={this.state.name}
               onChange={this.onChange}
-              placeholder="Product Name"
+              placeholder="Nome Casal"
               required
             /><br />
             <TextField
@@ -276,27 +283,39 @@ export default class Cadastro extends Component {
               name="desc"
               value={this.state.desc}
               onChange={this.onChange}
-              placeholder="Description"
+              placeholder="Descrição"
+              required
+            /><br />
+              <TextField
+              id="standard-basic"
+              type="number"
+              autoComplete="off"
+              name="tel"
+              value={this.state.tel}
+              onChange={this.onChange}
+              placeholder="Contato"
               required
             /><br />
             <TextField
               id="standard-basic"
-              type="number"
+              type="date"
+              format="MM/DD/YYYY"
               autoComplete="off"
-              name="price"
-              value={this.state.price}
+              name="niverH"
+              value={this.state.niverH}
               onChange={this.onChange}
-              placeholder="Price"
+              placeholder="Aniversario Homem"
               required
             /><br />
             <TextField
               id="standard-basic"
-              type="number"
+              type="date"
+              format="MM/DD/YYYY"
               autoComplete="off"
-              name="discount"
-              value={this.state.discount}
+              name="niverM"
+              value={this.state.niverM}
               onChange={this.onChange}
-              placeholder="Discount"
+              placeholder="Aniversario Mulher"
               required
             /><br /><br />
             <Button
@@ -319,25 +338,25 @@ export default class Cadastro extends Component {
           </DialogContent>
 
           <DialogActions>
-            <Button onClick={this.handleProductEditClose} color="primary">
-              Cancel
+            <Button onClick={this.handleCasaltEditClose} color="primary">
+              Cancelar
             </Button>
             <Button
-              disabled={this.state.name === '' || this.state.desc === '' || this.state.discount === '' || this.state.price === ''}
-              onClick={(e) => this.updateProduct()} color="primary" autoFocus>
-              Edit Product
+              disabled={this.state.name === '' || this.state.desc === '' || this.state.tel===''|| this.state.niverH === '' || this.state.niverM === '' }
+              onClick={(e) => this.updateCasal()} color="primary" autoFocus>
+              Editar Casais
             </Button>
           </DialogActions>
         </Dialog>
 
-        {/* Add Product */}
+        {/* Add Casais */}
         <Dialog
-          open={this.state.openProductModal}
-          onClose={this.handleProductClose}
+          open={this.state.openCasalModal}
+          onClose={this.handleCasalClose}
           aria-labelledby="alert-dialog-title"
           aria-describedby="alert-dialog-description"
         >
-          <DialogTitle id="alert-dialog-title">Add Product</DialogTitle>
+          <DialogTitle id="alert-dialog-title">Adicionar Casais</DialogTitle>
           <DialogContent>
             <TextField
               id="standard-basic"
@@ -346,7 +365,7 @@ export default class Cadastro extends Component {
               name="name"
               value={this.state.name}
               onChange={this.onChange}
-              placeholder="Product Name"
+              placeholder="Nome Casais"
               required
             /><br />
             <TextField
@@ -356,27 +375,40 @@ export default class Cadastro extends Component {
               name="desc"
               value={this.state.desc}
               onChange={this.onChange}
-              placeholder="Description"
+              placeholder="Descrição"
+              required
+            /><br />
+              <TextField
+              id="standard-basic"
+              type="number"
+              autoComplete="off"
+              name="tel"
+              value={this.state.tel}
+              onChange={this.onChange}
+              placeholder="Contato"
+              required
+            /><br />
+
+            <TextField
+              id="standard-basic"
+              type="date"
+              format="MM/DD/YYYY"
+              autoComplete="off"
+              name="niverH"
+              value={this.state.niverH}
+              onChange={this.onChange}
+              placeholder="Anirvesario Homem"
               required
             /><br />
             <TextField
               id="standard-basic"
-              type="number"
+              type="date"
+              format="MM/DD/YYYY"
               autoComplete="off"
-              name="price"
-              value={this.state.price}
+              name="niverM"
+              value={this.state.niverM}
               onChange={this.onChange}
-              placeholder="Price"
-              required
-            /><br />
-            <TextField
-              id="standard-basic"
-              type="number"
-              autoComplete="off"
-              name="discount"
-              value={this.state.discount}
-              onChange={this.onChange}
-              placeholder="Discount"
+              placeholder="Aniversario Mulher"
               required
             /><br /><br />
             <Button
@@ -387,9 +419,6 @@ export default class Cadastro extends Component {
                 idd="standard-basic"
                 type="file"
                 accept="image/*"
-                // inputProps={{
-                //   accept: "image/*"
-                // }}
                 name="file"
                 value={this.state.file}
                 onChange={this.onChange}
@@ -403,13 +432,13 @@ export default class Cadastro extends Component {
           </DialogContent>
 
           <DialogActions>
-            <Button onClick={this.handleProductClose} color="primary">
-              Cancel
+            <Button onClick={this.handleCasalClose} color="primary">
+              Cancelar
             </Button>
             <Button
-              disabled={this.state.name === '' || this.state.desc === '' || this.state.discount === '' || this.state.price === '' || this.state.file === null}
-              onClick={(e) => this.addProduct()} color="primary" autoFocus>
-              Add Product
+              disabled={this.state.name === '' || this.state.desc === ''|| this.state.tel==='' || this.state.H === '' || this.state.niverM === ''|| this.state.file === null}
+              onClick={(e) => this.addCasal()} color="primary" autoFocus>
+              Adicionar Casais
             </Button>
           </DialogActions>
         </Dialog>
@@ -424,48 +453,53 @@ export default class Cadastro extends Component {
             name="search"
             value={this.state.search}
             onChange={this.onChange}
-            placeholder="Search by product name"
+            placeholder="Procurar Casais"
             required
-          />
+          /> 
           <Table aria-label="simple table">
             <TableHead>
               <TableRow>
-                <TableCell align="center">Name</TableCell>
-                <TableCell align="center">Image</TableCell>
-                <TableCell align="center">Description</TableCell>
-                <TableCell align="center">Price</TableCell>
-                <TableCell align="center">Discount</TableCell>
-                <TableCell align="center">Action</TableCell>
+                <TableCell align="center">Nome Casal</TableCell>
+                <TableCell align="center">Imagem</TableCell>
+                <TableCell align="center">Descrição</TableCell>
+                <TableCell align="center">Contato</TableCell>
+                <TableCell align="center">Aniversario Homem</TableCell>
+                <TableCell align="center">Aniversario Mulher</TableCell>
+                <TableCell align="center">Ação</TableCell>
               </TableRow>
             </TableHead>
             <TableBody>
-              {this.state.products.map((row) => (
+              {this.state.casais.map((row) => (
                 <TableRow key={row.name}>
                   <TableCell align="center" component="th" scope="row">
                     {row.name}
                   </TableCell>
-                  <TableCell align="center"><img src={`https://back-end-test-t.herokuapp.com/${row.image}`} alt='' width="110" height="110"/></TableCell>
+                  <TableCell align="center"><img src={`https://projeto----amai.herokuapp.com/${row.image}`} alt="" width="70" height="70" /></TableCell>
                   <TableCell align="center">{row.desc}</TableCell>
-                  <TableCell align="center">{row.price}</TableCell>
-                  <TableCell align="center">{row.discount}</TableCell>
+                  <TableCell align="center">{row.tel}</TableCell>
+                  <TableCell align="center">{row.niverH}</TableCell>
+                  <TableCell align="center">{row.niverM}</TableCell>
+               
                   <TableCell align="center">
                     <Button
                       className="button_style"
                       variant="outlined"
                       color="primary"
                       size="small"
-                      onClick={(e) => this.handleProductEditOpen(row)}
+                      onClick={(e) => this.handleCasalEditOpen(row)}
                     >
-                      Edit
+                      Editar
                   </Button>
                     <Button
                       className="button_style"
                       variant="outlined"
                       color="secondary"
                       size="small"
-                      onClick={(e) => this.deleteProduct(row._id)}
+                      
+                      
+                      onClick={(e) => this.deleteCasal(row._id)}
                     >
-                      Delete
+                      Deletar
                   </Button>
                   </TableCell>
                 </TableRow>
