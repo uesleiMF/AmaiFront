@@ -33,7 +33,7 @@ export default class Dashboard extends Component {
   componentDidMount = () => {
     let token = localStorage.getItem('token');
     if (!token) {
-      this.props.history.push('/login');
+      window.location ="/login";
     } else {
       this.setState({ token: token }, () => {
         this.getCasal();
@@ -50,9 +50,10 @@ export default class Dashboard extends Component {
     if (this.state.search) {
       data = `${data}&search=${this.state.search}`;
     }
-    axios.get(`https://projeto----amai.herokuapp.com/get-casal${data}`, {
+    axios.get(`https://back-end-test-t.herokuapp.com/get-casal${data}`, {
       headers: {
         'token': this.state.token
+        
       }
     }).then((res) => {
       this.setState({ loading: false, casais: res.data.casais, pages: res.data.pages });
@@ -67,7 +68,7 @@ export default class Dashboard extends Component {
   }
 
   deleteCasal = (id) => {
-    axios.post('https://projeto----amai.herokuapp.com/delete-casal', {
+    axios.post('https://back-end-test-t.herokuapp.com/delete-casal', {
       id: id
     }, {
       headers: {
@@ -101,9 +102,14 @@ export default class Dashboard extends Component {
   }
 
   logOut = () => {
-    localStorage.setItem('token', null);
-    this.props.history.push('/');
-  }
+   
+      localStorage.removeItem("token");
+      window.location ="/home";
+    };
+  
+  
+  
+  
 
   onChange = (e) => {
     if (e.target.files && e.target.files[0] && e.target.files[0].name) {
@@ -127,7 +133,7 @@ export default class Dashboard extends Component {
     file.append('niverH', this.state.niverH);
     file.append('niverM', this.state.niverM);
 
-    axios.post('https://projeto----amai.herokuapp.com/add-casal', file, {
+    axios.post('https://back-end-test-t.herokuapp.com/add-casal', file, {
       headers: {
         'content-type': 'multipart/form-data',
         'token': this.state.token
@@ -169,7 +175,7 @@ export default class Dashboard extends Component {
    
 
 
-    axios.post('https://projeto----amai.herokuapp.com/update-casal', file, {
+    axios.post('https://back-end-test-t.herokuapp.com/update-casal', file, {
       headers: {
         'content-type': 'multipart/form-data',
         'token': this.state.token
@@ -474,7 +480,7 @@ export default class Dashboard extends Component {
                   <TableCell align="center" component="th" scope="row">
                     {row.name}
                   </TableCell>
-                  <TableCell align="center"><img src={`https://projeto----amai.herokuapp.com/${row.image}`} alt="" width="70" height="70" /></TableCell>
+                  <TableCell align="center"><img src={`https://back-end-test-t.herokuapp.com/${row.image}`} alt="" width="70" height="70" /></TableCell>
                   <TableCell align="center">{row.desc}</TableCell>
                   <TableCell align="center">{row.tel}</TableCell>
                   <TableCell align="center">{row.niverH}</TableCell>
