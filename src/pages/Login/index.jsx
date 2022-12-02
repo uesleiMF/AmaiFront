@@ -16,7 +16,7 @@ const Login = () => {
 	const handleSubmit = async (e) => {
 		e.preventDefault();
 		try {
-			const url = "https://back-end-test-t.herokuapp.com/api/auth";
+			const url = "http://localhost:3001/api/auth";
 			const { data: res } = await axios.post(url, data);
 			localStorage.setItem("token", res.data);
 			 window.location ="/cadastro";

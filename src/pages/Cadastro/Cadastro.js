@@ -50,7 +50,7 @@ export default class Dashboard extends Component {
     if (this.state.search) {
       data = `${data}&search=${this.state.search}`;
     }
-    axios.get(`https://back-end-test-t.herokuapp.com/get-casal${data}`, {
+    axios.get(`http://localhost:3001/get-casal${data}`, {
       headers: {
         'token': this.state.token
         
@@ -68,7 +68,7 @@ export default class Dashboard extends Component {
   }
 
   deleteCasal = (id) => {
-    axios.post('https://back-end-test-t.herokuapp.com/delete-casal', {
+    axios.post('http://localhost:3001/delete-casal', {
       id: id
     }, {
       headers: {
@@ -133,7 +133,7 @@ export default class Dashboard extends Component {
     file.append('niverH', this.state.niverH);
     file.append('niverM', this.state.niverM);
 
-    axios.post('https://back-end-test-t.herokuapp.com/add-casal', file, {
+    axios.post('http://localhost:3001/add-casal', file, {
       headers: {
         'content-type': 'multipart/form-data',
         'token': this.state.token
@@ -175,7 +175,7 @@ export default class Dashboard extends Component {
    
 
 
-    axios.post('https://back-end-test-t.herokuapp.com/update-casal', file, {
+    axios.post('http://localhost:3001/update-casal', file, {
       headers: {
         'content-type': 'multipart/form-data',
         'token': this.state.token
@@ -480,7 +480,7 @@ export default class Dashboard extends Component {
                   <TableCell align="center" component="th" scope="row">
                     {row.name}
                   </TableCell>
-                  <TableCell align="center"><img src={`https://back-end-test-t.herokuapp.com/${row.image}`} alt="" width="70" height="70" /></TableCell>
+                  <TableCell align="center"><img src={`http://localhost:3001/${row.image}`} alt="" width="70" height="70" /></TableCell>
                   <TableCell align="center">{row.desc}</TableCell>
                   <TableCell align="center">{row.tel}</TableCell>
                   <TableCell align="center">{row.niverH}</TableCell>
